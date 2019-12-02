@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpineGen", "SpineGen\SpineGen.csproj", "{B8C7EB72-C65A-47D5-9762-760B8D072262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpineGen.Test", "SpineGen.Test\SpineGen.Test.csproj", "{B00405F2-FD6C-4B9B-A699-54334733A8BE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A46046A1-9DE3-467A-8529-E3702C3D4D81} = {A46046A1-9DE3-467A-8529-E3702C3D4D81}
+		{30D482D5-EE06-42AB-B270-F2DD0EFFFFA4} = {30D482D5-EE06-42AB-B270-F2DD0EFFFFA4}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpineGen.JSON", "SpineGen.JSON\SpineGen.JSON.csproj", "{30D482D5-EE06-42AB-B270-F2DD0EFFFFA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B8C7EB72-C65A-47D5-9762-760B8D072262} = {B8C7EB72-C65A-47D5-9762-760B8D072262}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpineGen.Drawing.System.Drawing", "SpineGen.Drawing.System.Drawing\SpineGen.Drawing.System.Drawing.csproj", "{A46046A1-9DE3-467A-8529-E3702C3D4D81}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B8C7EB72-C65A-47D5-9762-760B8D072262} = {B8C7EB72-C65A-47D5-9762-760B8D072262}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8C7EB72-C65A-47D5-9762-760B8D072262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C7EB72-C65A-47D5-9762-760B8D072262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C7EB72-C65A-47D5-9762-760B8D072262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C7EB72-C65A-47D5-9762-760B8D072262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00405F2-FD6C-4B9B-A699-54334733A8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00405F2-FD6C-4B9B-A699-54334733A8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00405F2-FD6C-4B9B-A699-54334733A8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00405F2-FD6C-4B9B-A699-54334733A8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D482D5-EE06-42AB-B270-F2DD0EFFFFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D482D5-EE06-42AB-B270-F2DD0EFFFFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D482D5-EE06-42AB-B270-F2DD0EFFFFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D482D5-EE06-42AB-B270-F2DD0EFFFFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87DE5915-4334-44B4-9C84-71DA08513A8B}
+	EndGlobalSection
+EndGlobal
