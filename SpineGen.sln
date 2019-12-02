@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpineGen.Drawing.System.Dra
 		{B8C7EB72-C65A-47D5-9762-760B8D072262} = {B8C7EB72-C65A-47D5-9762-760B8D072262}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpineGen.AvaloniaTest", "SpineGen.AvaloniaTest\SpineGen.AvaloniaTest.csproj", "{B79FB922-3237-490A-BDA0-63859B646B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A46046A1-9DE3-467A-8529-E3702C3D4D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B79FB922-3237-490A-BDA0-63859B646B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B79FB922-3237-490A-BDA0-63859B646B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B79FB922-3237-490A-BDA0-63859B646B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B79FB922-3237-490A-BDA0-63859B646B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

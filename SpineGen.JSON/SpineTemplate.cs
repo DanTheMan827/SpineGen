@@ -13,8 +13,8 @@ namespace SpineGen.JSON
         [JsonConverter(typeof(RectangleConverter))]
         public override Rectangle LogoArea { get => base.LogoArea; set => base.LogoArea = value; }
 
-        public string Name;
-        public string Category;
+        public string Name { get; set; }
+        public string Category { get; set; }
         public bool ShouldSerializeImage() => false;
         public string ToJson() => JsonConvert.SerializeObject(this, Formatting.Indented);
         public void ToJsonFile(string filename) => File.WriteAllText(filename, ToJson());
