@@ -1,9 +1,10 @@
 ﻿using SpineGen.Drawing;
+using System;
 using System.Drawing;
 
 namespace SpineGen.Interfaces
 {
-    public interface IBitmap
+    public interface IBitmap: IDisposable
     {
         int Width { get; }
         int Height { get; }

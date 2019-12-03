@@ -39,5 +39,10 @@ namespace SpineGen.Drawing
         public Color GetPixel(int x, int y) => throw new NotImplementedException();
         public IBitmap<PortableBitmap> Extract(Rectangle rect) => throw new NotImplementedException();
         public IBitmap<PortableBitmap> ClearRegion(Rectangle rect) => throw new NotImplementedException();
+
+        public void Dispose()
+        {
+            PixelData = null;
+        }
     }
 }

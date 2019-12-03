@@ -183,5 +183,11 @@ namespace SpineGen.DrawingBitmaps
             }
             return this;
         }
+
+        public void Dispose()
+        {
+            Bitmap.Dispose();
+            Bitmap = null;
+        }
     }
 }

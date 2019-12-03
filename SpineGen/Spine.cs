@@ -1,12 +1,13 @@
 ﻿using SpineGen.Drawing;
 using SpineGen.Interfaces;
+using System;
 using System.Drawing;
 
 namespace SpineGen
 {
     public class Spine
     {
-        public class Template<I>
+        public class Template<I>: IDisposable
         {
             public virtual IBitmap<I> Image { get; set; }
             public virtual Rotation LogoRotation { get; set; } = Rotation.RotateNone;
@@ -14,6 +15,14 @@ namespace SpineGen
             public virtual VerticalAlignment LogoVerticalAlignment { get; set; } = VerticalAlignment.Middle;
             public virtual Rectangle LogoArea { get; set; } = new Rectangle(0, 0, 1, 1);
             public virtual IBitmap<I> Process(IBitmap<I> clearLogo) => Spine.ProcessTemplate(this, clearLogo);
+            public void Dispose()
+            {
+                if (Image != null)
+                {
+                    Image.Dispose();
+                    Image = null;
+                }
+            }
         }
 
         public static IBitmap<T> ProcessTemplate<T>(Template<T> template, IBitmap<T> clearLogo)
