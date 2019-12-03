@@ -168,5 +168,20 @@ namespace SpineGen.DrawingBitmaps
             }
             return new SystemDrawingBitmap(output);
         }
+
+        public IBitmap<Bitmap> Extract(Rectangle rect)
+        {
+            return Clone().Crop(rect);
+        }
+
+        public IBitmap<Bitmap> ClearRegion(Rectangle rect)
+        {
+            using (var g = GetGraphics(Bitmap))
+            {
+                g.CompositingMode = CompositingMode.SourceCopy;
+                g.FillRectangle(Brushes.Transparent, rect);
+            }
+            return this;
+        }
     }
 }

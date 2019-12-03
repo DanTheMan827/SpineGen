@@ -27,54 +27,17 @@ namespace SpineGen.Drawing
             Height = height;
         }
 
-        public IBitmap<PortableBitmap> Clone()
-        {
-            return new PortableBitmap(PixelData.Clone() as Color[], Width, Height);
-        }
-
-        public IBitmap<PortableBitmap> DrawImage(PortableBitmap image, Point destination)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IBitmap<PortableBitmap> Resize(Size size)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IBitmap<PortableBitmap> ResizeToFit(Size size)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IBitmap<PortableBitmap> Crop(Rectangle rect)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IBitmap<PortableBitmap> Rotate(Rotation rotation)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IBitmap<PortableBitmap> TrimPixels()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool EmptyRow(int y)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool EmptyColumn(int x)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Color GetPixel(int x, int y)
-        {
-            throw new NotImplementedException();
-        }
+        public IBitmap<PortableBitmap> Clone() => new PortableBitmap(PixelData.Clone() as Color[], Width, Height);
+        public IBitmap<PortableBitmap> DrawImage(PortableBitmap image, Point destination) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> Resize(Size size) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> ResizeToFit(Size size) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> Crop(Rectangle rect) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> Rotate(Rotation rotation) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> TrimPixels() => throw new NotImplementedException();
+        public bool EmptyRow(int y) => throw new NotImplementedException();
+        public bool EmptyColumn(int x) => throw new NotImplementedException();
+        public Color GetPixel(int x, int y) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> Extract(Rectangle rect) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> ClearRegion(Rectangle rect) => throw new NotImplementedException();
     }
 }

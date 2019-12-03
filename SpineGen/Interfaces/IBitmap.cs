@@ -21,6 +21,8 @@ namespace SpineGen.Interfaces
         IBitmap<T> Resize(Size size);
         IBitmap<T> ResizeToFit(Size size);
         IBitmap<T> Crop(Rectangle rect);
+        IBitmap<T> Extract(Rectangle rect);
+        IBitmap<T> ClearRegion(Rectangle rect);
         IBitmap<T> Rotate(Rotation rotation);
         IBitmap<T> TrimPixels();
 
