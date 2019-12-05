@@ -101,23 +101,17 @@ namespace SpineGen.DrawingBitmaps
 
         public Color GetPixel(int x, int y) => Bitmap.GetPixel(x, y);
 
-        public IBitmap<Bitmap> ResizeToFit(Size size)
+        public IBitmap<Bitmap> ResizeToFit(Size size, bool enlarge)
         {
             var newSize = Helpers.SizeToFit(Bitmap.Size, size);
-            var output = new Bitmap(newSize.Width, newSize.Height, Bitmap.PixelFormat);
-
-            using (var g = GetGraphics(output))
-            {
-                g.DrawImage(Bitmap, new Rectangle(Point.Empty, newSize), new Rectangle(Point.Empty, Bitmap.Size), GraphicsUnit.Pixel);
-            }
-
-            Bitmap = output;
-
-            return this;
+            return Resize(newSize, enlarge);
         }
 
-        public IBitmap<Bitmap> Resize(Size size)
+        public IBitmap<Bitmap> Resize(Size size, bool enlarge)
         {
+            if (Bitmap.Width < size.Width && Bitmap.Height < size.Height && enlarge == false)
+                return this;
+
             var output = new Bitmap(size.Width, size.Height, Bitmap.PixelFormat);
 
             using (var g = GetGraphics(output))

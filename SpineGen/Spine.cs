@@ -14,6 +14,8 @@ namespace SpineGen
             public virtual HorizontalAlignment LogoHorizontalAlignment { get; set; } = HorizontalAlignment.Middle;
             public virtual VerticalAlignment LogoVerticalAlignment { get; set; } = VerticalAlignment.Middle;
             public virtual Rectangle LogoArea { get; set; } = new Rectangle(0, 0, 1, 1);
+            public virtual double AspectRange { get; set; } = 0;
+            public virtual bool Enlarge { get; set; } = true;
             public virtual IBitmap<I> Process(IBitmap<I> clearLogo) => Spine.ProcessTemplate(this, clearLogo);
             public void Dispose()
             {
@@ -30,7 +32,20 @@ namespace SpineGen
 
             IBitmap<T> output;
 
-            var resizedLogo = clearLogo.Clone().TrimPixels().Rotate(template.LogoRotation).ResizeToFit(template.LogoArea.Size);
+            IBitmap<T> resizedLogo = clearLogo.Clone().TrimPixels().Rotate(template.LogoRotation);
+
+            double perfectRatio = template.LogoArea.Width / template.LogoArea.Height;
+            double ratioDifference = (clearLogo.Width / clearLogo.Height) - perfectRatio;
+
+
+            if (Math.Abs(ratioDifference) < template.AspectRange)
+            {
+                resizedLogo = clearLogo.Resize(template.LogoArea.Size, template.Enlarge);
+            }
+            else
+            {
+                resizedLogo = clearLogo.ResizeToFit(template.LogoArea.Size, template.Enlarge);
+            }
 
             int logoX = 0;
             int logoY = 0;

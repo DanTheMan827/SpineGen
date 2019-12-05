@@ -19,8 +19,8 @@ namespace SpineGen.Interfaces
         T Bitmap { get; }
         IBitmap<T> Clone();
         IBitmap<T> DrawImage(T image, Point destination);
-        IBitmap<T> Resize(Size size);
-        IBitmap<T> ResizeToFit(Size size);
+        IBitmap<T> Resize(Size size, bool enlarge);
+        IBitmap<T> ResizeToFit(Size size, bool enlarge);
         IBitmap<T> Crop(Rectangle rect);
         IBitmap<T> Extract(Rectangle rect);
         IBitmap<T> ClearRegion(Rectangle rect);

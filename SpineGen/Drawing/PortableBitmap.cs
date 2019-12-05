@@ -29,8 +29,8 @@ namespace SpineGen.Drawing
 
         public IBitmap<PortableBitmap> Clone() => new PortableBitmap(PixelData.Clone() as Color[], Width, Height);
         public IBitmap<PortableBitmap> DrawImage(PortableBitmap image, Point destination) => throw new NotImplementedException();
-        public IBitmap<PortableBitmap> Resize(Size size) => throw new NotImplementedException();
-        public IBitmap<PortableBitmap> ResizeToFit(Size size) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> Resize(Size size, bool enlarge) => throw new NotImplementedException();
+        public IBitmap<PortableBitmap> ResizeToFit(Size size, bool enlarge) => throw new NotImplementedException();
         public IBitmap<PortableBitmap> Crop(Rectangle rect) => throw new NotImplementedException();
         public IBitmap<PortableBitmap> Rotate(Rotation rotation) => throw new NotImplementedException();
         public IBitmap<PortableBitmap> TrimPixels() => throw new NotImplementedException();
