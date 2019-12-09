@@ -34,17 +34,17 @@ namespace SpineGen
 
             IBitmap<T> resizedLogo = clearLogo.Clone().TrimPixels().Rotate(template.LogoRotation);
 
-            double perfectRatio = template.LogoArea.Width / template.LogoArea.Height;
-            double ratioDifference = (clearLogo.Width / clearLogo.Height) - perfectRatio;
+            double perfectRatio = (double)(template.LogoArea.Width) / (double)(template.LogoArea.Height);
+            double ratioDifference = ((double)(resizedLogo.Width) / (double)(resizedLogo.Height)) - perfectRatio;
 
 
             if (Math.Abs(ratioDifference) < template.AspectRange)
             {
-                resizedLogo = clearLogo.Resize(template.LogoArea.Size, template.Enlarge);
+                resizedLogo = resizedLogo.Resize(template.LogoArea.Size, template.Enlarge);
             }
             else
             {
-                resizedLogo = clearLogo.ResizeToFit(template.LogoArea.Size, template.Enlarge);
+                resizedLogo = resizedLogo.ResizeToFit(template.LogoArea.Size, template.Enlarge);
             }
 
             int logoX = 0;

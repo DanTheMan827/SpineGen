@@ -19,7 +19,16 @@ namespace SpineGen.DrawingBitmaps
 
         public SystemDrawingBitmap(Bitmap image)
         {
-            Bitmap = image;
+            if (image.PixelFormat == System.Drawing.Imaging.PixelFormat.Format32bppArgb)
+            { 
+                Bitmap = image;
+            } 
+            else
+            {
+                Bitmap = new Bitmap(image.Width, image.Height);
+                DrawImage(image, new Point(0, 0));
+                image.Dispose();
+            }
         }
 
         public SystemDrawingBitmap(IBitmap bitmap)
